@@ -4,8 +4,7 @@ serve:
 build:
 	bundle exec jekyll build
 
-deploy:
-	netlify build
+deploy: build
 	netlify deploy --prod
 
 clean:
@@ -14,4 +13,5 @@ clean:
 dig:
 	dig managedkaos.com +noall +answer -t A
 	dig managedkaos.com +noall +answer -t AAAA
+	dig staging.managedkaos.com  +noall +answer
 
