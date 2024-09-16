@@ -21,15 +21,7 @@
 title: Managed Kaos
 email: info@managedkaos.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is the web presence for Managed Kaos, the brand for Michael Jenkins and associates.
-  We are a group of professionals who have been working in the IT industry for over 20 years.
-  With experience in linux system administration, cloud services, and software development, our specialities include...
-  - Applications architecture for AWS, Azure, and Google Cloud
-  - Serverless applications
-  - Process automation
-  - DevOps
-  - Training
-  - and more...
+  Everything's under control.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://managedkaos.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: managedkaos
