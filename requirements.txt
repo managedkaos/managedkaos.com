@@ -1,0 +1,6 @@
+google-cloud-storage
+flake8
+pylint
+black
+ruff
+
