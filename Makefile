@@ -36,15 +36,15 @@ dig:
 # Run gcloud-auth authenticate with gcloud before making the following targets:
 # - storage
 # - sync
-gcloud-auth:
+storage-auth:
 	gcloud auth login
 	gcloud auth application-default login
 
-gcloud-storage:
+storage-list:
 	@gcloud storage ls --recursive gs://g.managedkaos.com/** | sed 's/gs:\/\//https:\/\/storage.googleapis.com\//'
 
-gloud-sync:
+storage-sync:
 	@gsutil -o "GSUtil:parallel_process_count=1" rsync -r ./storage/ gs://g.managedkaos.com/
 	@python ./scripts/update_storage_index.py
 
-.PHONY: serve build deploy clean update requirements lint black theme dig gcloud-auth gcloud-storage gcloud-sync
+.PHONY: serve build deploy clean update requirements lint black theme dig storage-auth storage-storage storage-sync
