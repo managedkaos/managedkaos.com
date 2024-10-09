@@ -14,10 +14,37 @@ clean:
 update:
 	bundle update
 
-list-bucket:
-	@gcloud storage ls --recursive gs://g.managedkaos.com/**
+requirements:
+	pip install --requirement requirements.txt
+
+lint:
+	flake8 --ignore=E501,W503 --exit-zero ./scripts/*.py
+	pylint --errors-only --disable=C0301 ./scripts/*.py
+	black --diff --check ./scripts/*.py
+	yamllint _config.yml
+
+black:
+	black ./scripts/*.py
+
+theme:
+	open $(shell bundle info --path minima)
 
 dig:
 	dig managedkaos.com +noall +answer -t A
 	dig managedkaos.com +noall +answer -t AAAA
 
+# Run gcloud-auth authenticate with gcloud before making the following targets:
+# - storage
+# - sync
+storage-auth:
+	gcloud auth login
+	gcloud auth application-default login
+
+storage-list:
+	@gcloud storage ls --recursive gs://g.managedkaos.com/** | sed 's/gs:\/\//https:\/\/storage.googleapis.com\//'
+
+storage-sync:
+	@gsutil -o "GSUtil:parallel_process_count=1" rsync -r ./storage/ gs://g.managedkaos.com/
+	@python ./scripts/update_storage_index.py
+
+.PHONY: serve build deploy clean update requirements lint black theme dig storage-auth storage-storage storage-sync
