@@ -27,6 +27,15 @@ url: "https://managedkaos.com" # the base hostname & protocol for your site, e.g
 twitter_username: managedkaos
 github_username:  managedkaos
 
+header_pages:
+  - portfolio.markdown
+  - about.markdown
+
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+
 # Build settings
 theme: minima
 plugins:
