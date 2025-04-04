@@ -25,5 +25,5 @@ With experience in Linux system administration, cloud services, and software dev
 ## Let's Get Started
 
 Whether you're looking for expert advice, implementation support, or training, Managed Kaos is here to help. Contact us today to
-learn more about how we can assist your business.
+learn how we can assist you.
 
