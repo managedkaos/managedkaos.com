@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cloud Architecture Best Practices for 2024"
+title: "Cloud Architecture Best Practices for 2025"
 date: 2025-04-14 09:00:00 -0700
 categories: [cloud, architecture, best-practices]
 tags: [aws, azure, gcp, infrastructure, security]
