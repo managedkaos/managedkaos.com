@@ -20,16 +20,23 @@
 
 title: Managed Kaos
 email: info@managedkaos.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Everything's under control.
+description: Expert insights on cloud architecture, DevOps, and technical training from industry professionals
+author: Michael Jenkins
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://managedkaos.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: managedkaos
-github_username:  managedkaos
+twitter:
+  username: managedkaos
+  card: summary_large_image
+social:
+  name: Managed Kaos
+  links:
+    - https://twitter.com/managedkaos
+    - https://github.com/managedkaos
 
 header_pages:
   - portfolio.markdown
   - about.markdown
+  - blog.markdown
 
 collections:
   portfolio:
@@ -40,6 +47,8 @@ collections:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -60,3 +69,12 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Show post excerpts on the home page
+show_excerpts: true
+
+# RSS Feed settings
+feed:
+  path: feed.xml
+  posts_limit: 20
+  excerpt_only: true

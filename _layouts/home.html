@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="home">
+    <div class="home-content">
+        {{ content }}
+    </div>
+
+    {%- if site.posts.size > 0 -%}
+    <div class="news-section">
+        <h2 class="news-heading">Latest News</h2>
+        <ul class="post-list">
+            {%- for post in site.posts limit:5 -%}
+            <li class="post-item">
+                <article class="post-preview">
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <h3 class="post-title">
+                        <a class="post-link" href="{{ post.url | relative_url }}">
+                            {{ post.title | escape }}
+                        </a>
+                    </h3>
+                    {%- if site.show_excerpts -%}
+                    <div class="post-excerpt">
+                        {{ post.excerpt }}
+                    </div>
+                    {%- endif -%}
+                </article>
+            </li>
+            {%- endfor -%}
+        </ul>
+        <p class="view-all-news">
+            <a href="{{ "/blog" | relative_url }}">View all news →</a>
+        </p>
+    </div>
+    {%- endif -%}
+</div>
