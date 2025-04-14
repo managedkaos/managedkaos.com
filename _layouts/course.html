@@ -1,0 +1,49 @@
+---
+layout: content
+TODO: Update the page to display links to each item in the collection
+---
+
+<article class="course">
+    <header class="course-header">
+        <h1 class="course-title">{{ page.title }}</h1>
+        <div class="course-meta">
+            {% if page.platform %}
+            <span class="platform">{{ page.platform }}</span>
+            {% endif %}
+            {% if page.level %}
+            <span class="level">{{ page.level }}</span>
+            {% endif %}
+            {% if page.duration %}
+            <span class="duration">{{ page.duration }}</span>
+            {% endif %}
+            {% if page.date %}
+            <span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
+            {% endif %}
+            {% if page.tags %}
+            <div class="tags">
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="course-content">
+        {{ content }}
+    </div>
+
+    {% if page.excerpt %}
+    <div class="course-excerpt">
+        {{ page.excerpt }}
+    </div>
+    {% endif %}
+
+    {% if page.link %}
+    <div class="course-links">
+        <a href="{{ page.link }}" target="_blank" rel="noopener noreferrer" class="course-link">
+            View on {{ page.platform }}
+        </a>
+    </div>
+    {% endif %}
+</article>

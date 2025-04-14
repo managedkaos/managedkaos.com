@@ -42,6 +42,22 @@ collections:
   portfolio:
     output: true
     permalink: /portfolio/:path/
+  courses:
+    output: true
+    permalink: /portfolio/courses/:path/
+    directory: _portfolio/courses
+  podcasts:
+    output: true
+    permalink: /portfolio/podcasts/:path/
+    directory: _portfolio/podcasts
+  presentations:
+    output: true
+    permalink: /portfolio/presentations/:path/
+    directory: _portfolio/presentations
+  articles:
+    output: true
+    permalink: /portfolio/articles/:path/
+    directory: _portfolio/articles
 
 # Build settings
 theme: minima
@@ -78,3 +94,29 @@ feed:
   path: feed.xml
   posts_limit: 20
   excerpt_only: true
+
+defaults:
+  -
+    scope:
+      path: "_portfolio/courses"
+      type: "courses"
+    values:
+      layout: "course"
+  -
+    scope:
+      path: "_portfolio/podcasts"
+      type: "podcasts"
+    values:
+      layout: "podcast"
+  -
+    scope:
+      path: "_portfolio/presentations"
+      type: "presentations"
+    values:
+      layout: "presentation"
+  -
+    scope:
+      path: "_portfolio/articles"
+      type: "articles"
+    values:
+      layout: "article"

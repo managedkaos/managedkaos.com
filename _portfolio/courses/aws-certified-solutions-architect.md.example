@@ -1,0 +1,47 @@
+---
+layout: course
+title: "AWS Certified Solutions Architect - Professional"
+platform: "LinkedIn Learning"
+duration: "4h 30m"
+level: "Advanced"
+date: 2023-06-15
+author: "Michael Jenkins"
+topics:
+  - "AWS Well-Architected Framework"
+  - "High Availability and Fault Tolerance"
+  - "Cost Optimization"
+  - "Security Best Practices"
+  - "Scalability and Performance"
+links:
+  - title: "Course Link"
+    url: "https://www.linkedin.com/learning/aws-certified-solutions-architect-professional"
+---
+
+This comprehensive course covers everything you need to know to pass the AWS Certified Solutions Architect - Professional exam. Through hands-on demonstrations and real-world examples, you'll learn how to design and deploy scalable, highly available, and fault-tolerant systems on AWS.
+
+## Course Overview
+
+The course is structured to help you understand the core concepts and best practices for architecting solutions on AWS. We'll cover:
+
+- The AWS Well-Architected Framework and its six pillars
+- Designing multi-tier architectures
+- Implementing security controls and compliance requirements
+- Optimizing costs while maintaining performance
+- Managing and automating infrastructure
+
+## Who Should Take This Course
+
+This course is designed for:
+
+- Solutions architects
+- DevOps engineers
+- Cloud architects
+- IT professionals looking to advance their AWS knowledge
+
+## Prerequisites
+
+Before taking this course, you should have:
+
+- Basic understanding of AWS services
+- Experience with cloud computing concepts
+- Familiarity with networking and security fundamentals

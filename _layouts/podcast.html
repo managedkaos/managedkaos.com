@@ -1,0 +1,56 @@
+---
+layout: content
+TODO: Update the page to display links to each item in the collection
+---
+
+<article class="podcast">
+    <header class="podcast-header">
+        <h1 class="podcast-title">{{ page.title }}</h1>
+        <div class="podcast-meta">
+            {% if page.podcast_name %}
+            <span class="podcast-name">{{ page.podcast_name }}</span>
+            {% endif %}
+            {% if page.episode_number %}
+            <span class="episode">Episode {{ page.episode_number }}</span>
+            {% endif %}
+            {% if page.duration %}
+            <span class="duration">{{ page.duration }}</span>
+            {% endif %}
+            {% if page.date %}
+            <span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
+            {% endif %}
+            {% if page.tags %}
+            <div class="tags">
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="podcast-content">
+        {{ content }}
+    </div>
+
+    {% if page.excerpt %}
+    <div class="podcast-excerpt">
+        {{ page.excerpt }}
+    </div>
+    {% endif %}
+
+    {% if page.links %}
+    <div class="podcast-links">
+        <h2>Listen to the Episode</h2>
+        <ul>
+            {% for link in page.links %}
+            <li>
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="listen-link">
+                    {{ link.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</article>

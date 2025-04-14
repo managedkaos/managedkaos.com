@@ -151,3 +151,182 @@
         }
     }
 }
+
+/* Content Item Styles */
+.content-item {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+.content-header {
+    margin-bottom: 2em;
+}
+
+.content-title {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+.content-meta {
+    color: #666;
+    font-size: 0.9em;
+
+    span {
+        margin-right: 1em;
+    }
+}
+
+.content-body {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.content-links {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+
+    h2 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 0.5em;
+    }
+
+    a {
+        color: #0077B5;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Course Details */
+.course-details {
+    background: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+
+    .label {
+        font-weight: bold;
+        margin-right: 0.5em;
+    }
+
+    .course-topics {
+        margin-top: 1em;
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 1.5em;
+        }
+    }
+}
+
+/* Podcast Details */
+.podcast-details {
+    background: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+
+    .label {
+        font-weight: bold;
+        margin-right: 0.5em;
+    }
+
+    .podcast-guests {
+        margin-top: 1em;
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
+}
+
+/* Presentation Details */
+.presentation-details {
+    background: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+
+    .label {
+        font-weight: bold;
+        margin-right: 0.5em;
+    }
+
+    .presentation-slides {
+        margin-top: 1em;
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    }
+}
+
+/* Article Details */
+.article-details {
+    background: #f9f9f9;
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+
+    .label {
+        font-weight: bold;
+        margin-right: 0.5em;
+    }
+
+    .article-tags {
+        margin-top: 1em;
+
+        h3 {
+            font-size: 1.2em;
+            margin-bottom: 0.5em;
+        }
+
+        .tag-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5em;
+        }
+
+        .tag {
+            background: #0077B5;
+            color: white;
+            padding: 0.3em 0.8em;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+    }
+}

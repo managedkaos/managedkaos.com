@@ -1,0 +1,53 @@
+---
+layout: content
+TODO: Update the page to display links to each item in the collection
+---
+
+<article class="presentation">
+    <header class="presentation-header">
+        <h1 class="presentation-title">{{ page.title }}</h1>
+        <div class="presentation-meta">
+            {% if page.event %}
+            <span class="event">{{ page.event }}</span>
+            {% endif %}
+            {% if page.location %}
+            <span class="location">{{ page.location }}</span>
+            {% endif %}
+            {% if page.date %}
+            <span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
+            {% endif %}
+            {% if page.tags %}
+            <div class="tags">
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </header>
+
+    <div class="presentation-content">
+        {{ content }}
+    </div>
+
+    {% if page.excerpt %}
+    <div class="presentation-excerpt">
+        {{ page.excerpt }}
+    </div>
+    {% endif %}
+
+    {% if page.slides %}
+    <div class="presentation-links">
+        <h2>Presentation Materials</h2>
+        <ul>
+            {% for slide in page.slides %}
+            <li>
+                <a href="{{ slide.url }}" target="_blank" rel="noopener noreferrer" class="slide-link">
+                    {{ slide.title }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</article>

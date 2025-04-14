@@ -1,0 +1,47 @@
+---
+layout: presentation
+title: "Building Serverless Applications at Scale"
+event: "AWS re:Invent 2023"
+location: "Las Vegas, NV"
+date: 2023-11-30
+author: "Michael Jenkins"
+slides:
+  - title: "Presentation Slides"
+    url: "https://example.com/slides/serverless-scale"
+  - title: "Demo Repository"
+    url: "https://github.com/example/serverless-demo"
+---
+
+This presentation explores the challenges and solutions for building serverless applications at scale. We'll cover architectural patterns, performance optimization, and cost management strategies based on real-world implementations.
+
+## Presentation Outline
+
+1. **Introduction to Serverless Architecture**
+   - Benefits and challenges
+   - Common use cases
+   - When to choose serverless
+
+2. **Scaling Considerations**
+   - Cold start optimization
+   - Concurrency management
+   - State handling
+   - Database scaling
+
+3. **Cost Optimization**
+   - Understanding pricing models
+   - Right-sizing functions
+   - Caching strategies
+   - Monitoring and alerting
+
+4. **Security Best Practices**
+   - IAM policies
+   - Network security
+   - Secrets management
+   - Compliance considerations
+
+## Key Takeaways
+
+- Serverless doesn't mean "no operations"
+- Proper monitoring is crucial for scaling
+- Cost optimization requires continuous attention
+- Security should be built-in, not bolted on
